@@ -3,3 +3,4 @@ description: Rui-Z Day
 baseurl: "/isitnov30th"
 exclude: ['README.md']
 iconURL: assets/img/arale.png
+timezone: Asia/Shanghai
