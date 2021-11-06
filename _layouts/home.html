@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="home">
+	{%assign month = site.time|date:'%m'%}
+	{%assign day = site.time|date:'%-d'%}
+	{% capture a %}11{%endcapture%}
+	{% capture b %}30{%endcapture%}
+
+	{% if  (month == a) and (day == b) %}
+		<a href="{{site.baseurl}}/bigday.html" class="answer">
+			<h1>YES</h1>
+		</a>
+	{% else %}
+		<a href="{{site.baseurl}}/nottoday.html" class="answer">
+		<h1>NO</h1>
+		</a>
+	{% endif %}
+</div>

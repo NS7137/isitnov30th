@@ -1,0 +1,30 @@
+---
+layout: default
+---
+	<div align="right">
+		<audio id="music" loop="loop">
+			<source src="{{site.baseurl}}/assets/music/thegirltellme.mp3"  type="audio/mp3"/>你的浏览器不支持audio标签。
+		</audio>
+		<a href="javascript:playPause();"><img src="{{site.baseurl}}/assets/img/pause.svg" width="40" height="50" id="music_btn" border="0"></a>
+	</div>
+	<h1 class="bigday">HAPPY BIRTHDAY TO Rui-Z!</h1>
+
+	<div align="center"><img src="{{site.baseurl}}/assets/img/cake.png" width="600" height="600"></div>
+
+	<script>
+		// document.querySelector('body').bgColor = "F499B2"
+		document.querySelector('body').background = "{{site.baseurl}}/assets/img/bg1.png"
+		function playPause() {
+		    var music = document.getElementById('music');
+		    var music_btn = document.getElementById('music_btn');
+		    if (music.paused){
+		        music.play();
+		        music_btn.src = "{{site.baseurl}}/assets/img/pause.svg";
+		    }
+		    else{
+		        music.pause();
+		        music_btn.src = "{{site.baseurl}}/assets/img/play.svg";
+		    }
+		}
+	</script>
+

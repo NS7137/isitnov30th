@@ -1,0 +1,50 @@
+.answer {
+	font-family: Times New Roman,sans-serif;
+	margin-top: 200px;
+	font-weight: bold;
+	font-size: 120pt;
+	text-align: center;
+
+	cursor: default;
+}
+
+.bigday {
+	flex: 1 0 auto;
+	color: crimson;
+	font-family: Cambria,sans-serif;
+	font-size: 100px;
+	text-align: center;
+}
+
+.nottoday {
+	flex: 1 0 auto;
+	color: darkblue;
+	font-family: Cambria,sans-serif;
+	font-size: 120px;
+	text-align: center;
+}
+
+a {
+	color: navajowhite;
+	text-decoration:none;
+}
+
+a:hover {
+	color: orange;
+}
+
+.home {
+	flex: 1 0 auto;
+}
+
+.site-footer{
+	flex: 0 0 auto;
+    text-align:center
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
