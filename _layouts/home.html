@@ -2,8 +2,8 @@
 layout: default
 ---
 <div class="home">
-	{%assign month = site.time|date:'%m'%}
-	{%assign day = site.time|date:'%-d'%}
+	{%assign month = 'now'|date:'%m'%}
+	{%assign day = 'now'|date:'%-d'%}
 	{% capture a %}11{%endcapture%}
 	{% capture b %}30{%endcapture%}
 
