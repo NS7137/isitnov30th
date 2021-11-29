@@ -1,3 +1,13 @@
+@media all and (orientation : portrait) {
+/*竖屏*/
+
+}
+
+@media all and (orientation : landscape) {
+/*横屏*/
+
+}
+
 .answer {
 	font-family: Times New Roman,sans-serif;
 	margin-top: 200px;
