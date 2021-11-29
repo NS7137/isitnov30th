@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<div class="nottoday" id='nd'>
+	<!-- TODAY IS {{'now'|date:"%Y-%m-%d"}} -->
+
+</div>
+
+<script type="text/javascript">
+	var d = new Date();
+	document.getElementById('nd').innerHTML = 'TODAY IS ' + d.toLocaleDateString()
+</script>

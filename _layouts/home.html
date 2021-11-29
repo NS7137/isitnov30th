@@ -1,19 +1,27 @@
 ---
 layout: default
 ---
-<div class="home">
-	{%assign month = 'now'|date:'%m'%}
-	{%assign day = 'now'|date:'%-d'%}
-	{% capture a %}11{%endcapture%}
-	{% capture b %}30{%endcapture%}
+<div class="home" id='hm'>
 
-	{% if  (month == a) and (day == b) %}
-		<a href="{{site.baseurl}}/bigday.html" class="answer">
-			<h1>YES</h1>
-		</a>
-	{% else %}
-		<a href="{{site.baseurl}}/nottoday.html" class="answer">
-		<h1>NO</h1>
-		</a>
-	{% endif %}
 </div>
+
+<script type="text/javascript">
+	let date = new Date()
+	let month = date.getMonth()+1
+	let day = date.getDate()
+	if (month===11 && day===30) {
+		document.getElementById('hm').innerHTML = `
+			<a href="{{site.baseurl}}/assets/public/bigday.html" class="answer">
+				<h1>YES</h1>
+			</a>
+		`
+			
+		
+	} else {
+		document.getElementById('hm').innerHTML = `
+			<a href="{{site.baseurl}}/assets/public/nottoday.html" class="answer">
+			<h1>NO</h1>
+			</a>
+		`
+	}
+</script>
