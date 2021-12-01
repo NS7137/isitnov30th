@@ -5,8 +5,27 @@ layout: default
 	<!-- TODAY IS {{'now'|date:"%Y-%m-%d"}} -->
 
 </div>
+<div>
+	<form id="rf" align='center'>
+		<lable>Rui's entry</lable>
+		<input type="text" name="dscid" placeholder="ENTER DSC ID" id="dscid">
+		<button id="submit" class="btn">Enter</button>
+		<p id='err'></p>
+	</form>
+<div>
 
 <script type="text/javascript">
 	var d = new Date();
-	document.getElementById('nd').innerHTML = 'TODAY IS ' + d.toLocaleDateString()
+	document.getElementById('nd').innerHTML = `<p>TODAY IS ${d.toLocaleDateString()}</p>`
+
+	var submitBtn = document.getElementById('submit')
+	submitBtn.onclick = function (event) {
+		event.preventDefault();
+		let dscid = document.getElementById('rf').dscid.value.trim().toUpperCase()
+		if (dscid === 'LSH242') {
+			location='{{site.baseurl}}/assets/public/bigday.html'
+		} else {
+			document.getElementById('err').innerHTML = 'Invalid ID'
+		}
+	}
 </script>
